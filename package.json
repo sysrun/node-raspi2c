@@ -1,0 +1,36 @@
+{
+  "name": "node-raspi2c",
+  "homepage": "https://github.com/sysrun/node-raspi2c",
+  "version": "0.0.1-alpha",
+  "main": "main.js",
+  "description": "i2c-devices fpr Raspberry Pi",
+  "keywords": [
+    "raspberry pi",
+    "i2c"
+  ],
+  "author": {
+    "name": "Frederik Granna",
+    "email": "i2cdev@granna.de",
+    "url": "http://www.sysrun.de"
+  },
+  "bugs": {
+    "url": "https://github.com/sysrun/node-raspi2c/issues"
+  },
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sysrun/node-raspi2c.git"
+  },
+  "dependencies": {
+    "bindings": "~1.0.0",
+    "async": "0.2.6",
+    "step": "0.0.5",
+    "underscore": "1.4.4"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "readmeFilename": "README.md"
+}
+
