@@ -1,12 +1,13 @@
 {
-  "name": "node-raspi2c",
+  "name": "raspi2c",
   "homepage": "https://github.com/sysrun/node-raspi2c",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "main": "main.js",
   "description": "i2c-devices fpr Raspberry Pi",
   "keywords": [
     "raspberry pi",
-    "i2c"
+    "i2c",
+    "DS1340"
   ],
   "author": {
     "name": "Frederik Granna",
