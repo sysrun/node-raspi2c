@@ -3,7 +3,7 @@
   "homepage": "https://github.com/sysrun/node-raspi2c",
   "version": "0.0.3-alpha",
   "main": "main.js",
-  "description": "i2c-devices fpr Raspberry Pi",
+  "description": "Native i2c for Raspberry Pi",
   "keywords": [
     "raspberry pi",
     "i2c",
