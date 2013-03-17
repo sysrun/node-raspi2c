@@ -1,12 +1,13 @@
 {
   "name": "raspi2c",
   "homepage": "https://github.com/sysrun/node-raspi2c",
-  "version": "0.0.3-alpha",
+  "version": "0.0.4-alpha",
   "main": "main.js",
   "description": "Native i2c for Raspberry Pi",
   "keywords": [
     "raspberry pi",
     "i2c",
+    "raspberry",
     "DS1340"
   ],
   "author": {
