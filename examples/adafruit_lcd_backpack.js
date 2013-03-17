@@ -6,7 +6,7 @@ Demo for Adafruit Blue&White 16x2 LCD+Keypad Kit for Raspberry Pi
 
 var lcdDevice = require('../lib/devices/ADAFRUIT_LCD_HD44780_MCP23017');
 
-/* 
+/*
  Default options
  {
     busnum: 0,
@@ -19,6 +19,11 @@ var lcdDevice = require('../lib/devices/ADAFRUIT_LCD_HD44780_MCP23017');
   */
 
 new lcdDevice({busnum: 1}, function(lcd){
+
+  // Read & print button events
+  lcd.on('button', function(d){
+    console.log(d);
+  });
 
   console.log('clearing');
   lcd.clear(function(){
