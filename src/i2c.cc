@@ -124,6 +124,33 @@ Handle<Value> ReadByteData(const Arguments& args) {
 
   return scope.Close(Integer::New(res));
 }
+
+Handle<Value> ReadBlockData(const Arguments& args) {
+  HandleScope scope;
+
+  int i;
+  int8_t addr = args[0]->Int32Value();
+  int8_t reg = args[1]->Int32Value();
+  int8_t len = args[2]->Int32Value();
+
+  uint8_t data[len];
+
+  setAddress(addr);
+
+  Local<Array> results(Array::New(len));
+
+  if(i2c_smbus_read_i2c_block_data(fd, reg, len, data) == len) {
+
+    for(i = 0; i < len; i++) {
+      results->Set(i, Integer::New(data[i]));
+    }
+  } else {
+
+  }
+
+  return scope.Close(results);
+}
+
 Handle<Value> WriteByteData(const Arguments& args) {
   HandleScope scope;
 
@@ -249,6 +276,8 @@ void Init(Handle<Object> target) {
   target->Set(String::NewSymbol("ReadByteData"),
       FunctionTemplate::New(ReadByteData)->GetFunction());
 
+  target->Set(String::NewSymbol("ReadBlockData"),
+      FunctionTemplate::New(ReadBlockData)->GetFunction());
 
   target->Set(String::NewSymbol("stream"),
     FunctionTemplate::New(Stream)->GetFunction());
