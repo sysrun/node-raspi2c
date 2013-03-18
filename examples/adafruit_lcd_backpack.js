@@ -22,7 +22,13 @@ new lcdDevice({busnum: 1}, function(lcd){
 
   // Read & print button events
   lcd.on('button', function(d){
-    console.log(d);
+    if (d.value) {
+      lcd.clear(function(){
+        lcd.message(d.button, function(){
+          console.log(d);
+        });
+      });
+    }
   });
 
   console.log('clearing');
