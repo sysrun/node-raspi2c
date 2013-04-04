@@ -24,6 +24,7 @@
     "url": "git@github.com:sysrun/node-raspi2c.git"
   },
   "dependencies": {
+    "i2c": "https://github.com/sysrun/node-i2c/tarball/master",
     "bindings": "~1.0.0",
     "async": "0.2.6",
     "step": "0.0.5",
